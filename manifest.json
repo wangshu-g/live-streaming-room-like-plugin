@@ -1,0 +1,45 @@
+{
+  "name": "live-streaming-room-like-plugin",
+  "version": "0.0.2",
+  "manifest_version": 3,
+  "description": "live-streaming-room-like-plugin",
+  "icons": {
+    "16": "assets/icons/icon-16.png",
+    "32": "assets/icons/icon-32.png",
+    "48": "assets/icons/icon-48.png",
+    "128": "assets/icons/icon-128.png"
+  },
+  "action": {
+    "default_popup": "html/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://live.bilibili.com/*"
+      ],
+      "js": [
+        "js/bilibili.js"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "https://live.douyin.com/*"
+      ],
+      "js": [
+        "js/douyin.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/images/*.jpeg"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}

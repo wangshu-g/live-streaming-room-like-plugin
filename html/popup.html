@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>live-room-likes-plugin</title>
+    <style>
+        body {
+            width: 200px;
+            text-align: center;
+            user-select: none;
+        }
+
+        #start-like {
+            background-color: #f69;
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        #timeout-range {
+            cursor: pointer;
+        }
+
+        #timeout-range::-webkit-slider-runnable-track {
+            border-radius: 10px;
+            background: #f69;
+            height: 10px;
+        }
+
+        #timeout-range::-webkit-slider-thumb {
+            width: 25px;
+            height: 25px;
+            margin-top: -3px;
+            border-radius: 50%;
+            background: white;
+            fill: white;
+            box-shadow: 0 0 25px white inset;
+        }
+    </style>
+</head>
+<body>
+<p>支持 BiliBili、抖音 直播间点赞</p>
+<p>
+<p><label for="timeout-range">点赞间隔毫秒(100-2000 ms): </label></p>
+<p><input id="timeout-range" type="range" min="100" max="2000" value="100" step="100"></p>
+<p><span id="timeout-value"></span></p>
+<button id="start-like">点击开始点赞</button>
+<script src="/js/popup.js"></script>
+</body>
+</html>
