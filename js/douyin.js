@@ -9,7 +9,7 @@ let likeTimer;
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     let {timeout} = request;
     timeout ??= 100;
-    const likeButtons = document.getElementsByClassName("LO5TGkc0");
+    const likeButtons = document.getElementById("LikeLayout").children;
     if (likeButtons && likeButtons.length > 0) {
         clearInterval(likeTimer);
         const likeBtn = likeButtons[0];
