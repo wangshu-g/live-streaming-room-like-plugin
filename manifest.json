@@ -1,8 +1,8 @@
 {
-  "name": "live-streaming-room-like-plugin",
-  "version": "0.0.4",
+  "name": "直播间点赞插件",
+  "version": "0.0.1",
   "manifest_version": 3,
-  "description": "live-streaming-room-like-plugin",
+  "description": "一个浏览器直播间点赞插件，支持 BiliBili、抖音 直播间点赞",
   "icons": {
     "16": "assets/icons/icon-16.png",
     "32": "assets/icons/icon-32.png",
